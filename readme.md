@@ -90,6 +90,20 @@ terraform destroy
 # Type 'yes' to confirm when promoted
 ```
 
+## Summary table 
+    |--------------------------|----------------------|---------------------------------|
+    | Step                     | Command              | Purpose                         |
+    |--------------------------|----------------------|---------------------------------|
+    | Initialize Terraform     | terraform init       | Provide setup                   |
+    | Preview Plan             | terraform plan       | See proposed infra changes      |
+    | Apply Configuration      | terraform apply      | Create Docker image/container   |
+    | List Managed Resources   | terraform state list | Show Terraform-managed infra    |
+    | Destroy Infrastructure   | terraform destroy    | Remove everything created       |
+    | (Docker CLI alternative) | docker run ...       | Run container directly (no IaC) |
+    |--------------------------|----------------------|---------------------------------|
+
+
+
 ## Outcome
 By following these steps, you will:
 * Learn how to use Terraform and its Docker provider to provision a container from code.
@@ -104,3 +118,4 @@ By following these steps, you will:
 ## Contact or Ask Questions :
 
 If you're stuck or would like to  extend this project ( e.g., mounting volumes, using different images), feel free to ask for help !
+
