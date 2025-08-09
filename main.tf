@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "docker" {
-  host = "unix:///var/run/docker.sock"
+  host = "tcp://localhost:2375/"
 }
 
 resource "docker_image" "nginx" {
@@ -16,10 +16,11 @@ resource "docker_image" "nginx" {
 }
 
 resource "docker_container" "nginx_container" {
-  name  = "mynginx"
-  image = docker_image.nginx.latest
+  name  = "nginx-container"
+  image = docker_image.nginx.name
   ports {
     internal = 80
     external = 8080
   }
 }
+
